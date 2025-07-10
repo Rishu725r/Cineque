@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "../utils/axios";
+import Sidenav from "./templates/Sidenav";
 
 const Trending = () => {
   const [movies, setMovies] = useState([]);
@@ -13,8 +14,13 @@ const Trending = () => {
   }, []);
 
   return (
+    <>
+      <Sidenav/>
     <div className="container mx-auto px-4 py-8">
-      <div className="h-screen overflow-y-auto pb-16">
+        <div className="h-screen overflow-y-auto pb-16">
+          <h2 className="text-3xl font-bold text-center mb-6 text-white">
+          Trending
+        </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 justify-items-center">
           {movies.map((movie) => (
             <div
@@ -33,7 +39,8 @@ const Trending = () => {
           ))}
         </div>
       </div>
-    </div>
+      </div>
+      </>
   );
 };
 

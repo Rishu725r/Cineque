@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "../utils/axios";
+import Sidenav from "./templates/Sidenav";
 
 const Popular = () => {
   const [movies, setMovies] = useState([]);
@@ -13,8 +14,10 @@ const Popular = () => {
   }, []);
 
   return (
-    <div className="w-full min-h-screen bg-[#0f172a] text-white p-8">
-  <h2 className="text-3xl font-bold text-center mb-6 text-blue-400">Popular Movies</h2>
+<>
+<Sidenav/>
+    <div className="w-full min-h-screen  text-white p-8">
+  <h2 className="text-3xl font-bold text-center mb-6 text-white-400">Popular Movies</h2>
 
       <div className="grid grid-cols-2 gap-6 p-8 w-full h-[80vh]">
         {movies.slice(0, 4).map((movie) => (
@@ -44,7 +47,8 @@ const Popular = () => {
           </div>
         ))}
       </div>
-    </div>
+      </div>
+      </>
   );
 };
 

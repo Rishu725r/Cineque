@@ -1,8 +1,11 @@
 import React from "react";
+import Sidenav from "./templates/Sidenav";
 
 const Cineque = () => {
   return (
-    <div className="min-h-screen w-full bg-indigo-600 flex items-center justify-center p-4">
+    <>
+    <Sidenav/>
+    <div className="min-h-screen w-full flex items-center justify-center p-4">
       
       <div className="bg-gray-900 rounded-2xl shadow-lg p-8 max-w-4xl w-full text-center space-y-6 border border-indigo-300">
        
@@ -44,7 +47,8 @@ const Cineque = () => {
           Cineque helps entertainment lovers enjoy, explore, and track their favorite titles — all in one place. 🚀
         </p>
       </div>
-    </div>
+      </div>
+      </>
   );
 };
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "../utils/axios";
+import Sidenav from "./templates/Sidenav";
 
 const TvShows = () => {
   const [tvShows, setTvShows] = useState([]);
@@ -13,6 +14,8 @@ const TvShows = () => {
   }, []);
 
   return (
+    <>
+      <Sidenav/>
     <div className="container mx-auto px-4 py-8">
       <h2 className="text-white text-2xl font-bold mb-6 text-center">Popular TV Shows</h2>
 
@@ -45,7 +48,7 @@ const TvShows = () => {
           ))}
         </div>
       </div>
-    </div>
+    </div></>
   );
 };
 

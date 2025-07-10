@@ -33,8 +33,8 @@ const Sidenav = () => {
           className="text-2xl font-bold mb-5 cursor-pointer hover:text-[#6556CD] transition duration-300"
           onClick={() => window.location.reload()}
         >
-          <i className="text-[#6556CD] ri-tv-fill mr-2"></i>
-          Cineque.
+          <Link to="/"> <i className="text-[#6556CD] ri-tv-fill mr-2"></i>Cineque.</Link>
+          
         </h1>
 
         <nav className="flex flex-col gap-3">

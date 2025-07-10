@@ -7,11 +7,15 @@ import TvShows from "./components/TvShows";
 import People from "./components/People";
 import Cineque from "./components/Cineque";
 import ContactUs from "./components/ContactUs";
+import Sidenav from "./components/templates/Sidenav";
 
 const App = () => {
   return (
+    <>
+   
     <div className="bg-[#1F1E24] h-screen w-screen flex overflow-y-auto scroll-h">
-      {" "}
+        {" "}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/trending" element={<Trending />} />
@@ -22,7 +26,8 @@ const App = () => {
         <Route path="/cineque" element={<Cineque />} />
         <Route path="/contact" element={<ContactUs />} />
       </Routes>
-    </div>
+      </div>
+      </>
   );
 };
 
