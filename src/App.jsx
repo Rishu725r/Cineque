@@ -1,4 +1,3 @@
-import React from  "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Trending from "./components/Trending";
@@ -13,10 +12,7 @@ import Sidenav from "./components/templates/Sidenav";
 const App = () => {
   return (
     <>
-   
     <div className="bg-[#1F1E24] h-screen w-screen flex overflow-y-auto scroll-h">
-        {" "}
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/trending" element={<Trending />} />
@@ -28,7 +24,7 @@ const App = () => {
         <Route path="/contact" element={<ContactUs />} />
       </Routes>
       </div>
-      </>
+    </>
   );
 };
 
